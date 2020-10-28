@@ -1,0 +1,33 @@
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  @include text;
+  color: $dark;
+  background-color: $white;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href]:hover {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

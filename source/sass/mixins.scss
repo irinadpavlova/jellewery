@@ -1,0 +1,51 @@
+@mixin text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Poppins", "Arial", sans-serif;
+  color: #1D1613;
+  text-align: center;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin title-desktop {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #011c40;
+}
+
+@mixin title-tablet {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
+  color: #011c40;
+}
+
+@mixin title-mobile {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #011c40;
+}
+
+@mixin button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  padding-top: 9px;
+  border: none;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #f9fbfd;
+}
