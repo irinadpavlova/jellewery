@@ -1,0 +1,128 @@
+.main-banner {
+  width: 100%;
+  min-height: 463px;
+  background: url("../img/main-banner-desktop@1x.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: $bg;
+  padding-top: 189px;
+  padding-bottom: 80px;
+  margin-bottom: 120px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .main-banner {
+    background-image: url("../img/main-banner-desktop@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.main-banner--catalog {
+  min-height: 261px;
+  background: url("../img/catalog-bg@1x.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: $bg;
+  padding-top: 91px;
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .main-banner--catalog {
+    background-image: url("../img/catalog-bg@2x.jpg");
+    background-size: cover;
+  }
+}
+
+.main-banner p {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 49px;
+  text-align: center;
+  color: $white;
+}
+
+.main-banner strong {
+  display: block;
+  margin: 0;
+
+  @include title;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-style: normal;
+  color: $white;
+}
+
+.main-banner--catalog h1 {
+  margin: 0;
+  margin-bottom: 2px;
+
+  @include title;
+  color: $white;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.main-banner--catalog p {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  color: $white;
+}
+
+
+@media (max-width: $tablet-width) {
+  .main-banner {
+    background: url("../img/main-banner-tablet@1x.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: $bg;
+    padding-top: 188px;
+    padding-right: 17px;
+    padding-bottom: 80px;
+    margin-bottom: 69px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-banner {
+      background-image: url("../img/main-banner-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-banner {
+    background: url("../img/main-banner-mobile@1x.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: $bg;
+    padding-right: 0;
+    padding-bottom: 80px;
+    margin-bottom: 59px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-banner {
+      background-image: url("../img/main-banner-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .main-banner p {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .main-banner strong {
+    font-size: 38px;
+    line-height: 49px;
+  }
+
+  .main-banner .main-banner__text {
+    margin-top: -7px;
+  }
+}

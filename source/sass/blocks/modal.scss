@@ -1,0 +1,278 @@
+.modal {
+  display: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -293px;
+  margin-left: -215px;
+  position: fixed;
+  z-index: 10;
+  width: 430px;
+  min-height: 586px;
+  padding: 45px;
+  padding-top: 189px;
+  background-color: #f0eae4;
+  background-image: url("../img/login-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% auto;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .modal {
+    background-image: url("../img/login-bg@2x.jpg");
+    background-size: 100% auto;
+  }
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 16px;
+    background-color: $dark;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal h1 {
+  margin: 0;
+  margin-bottom: 22px;
+
+  @include title;
+  letter-spacing: normal;
+}
+
+.modal input {
+  width: 100%;
+  padding-top: 9px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  margin-bottom: 25px;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: #f0eae4;
+}
+
+.modal input[placeholder] {
+  border: none;
+  border-bottom: 1px solid $dark;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  font-family: $font;
+  letter-spacing: normal;
+  background-color: #f0eae4;
+}
+
+.modal ::-webkit-input-placeholder {
+  color: $grey;
+  background-color: #f0eae4;
+}
+
+.modal :-ms-input-placeholder {
+  color: $grey;
+  background-color: #f0eae4;
+}
+
+.modal ::-moz-placeholder {
+  color: $grey;
+  background-color: #f0eae4;
+}
+
+.modal__password-wrapper {
+  position: relative;
+}
+
+.modal__password-wrapper a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey;
+}
+
+.modal__password {
+  margin-bottom: 50px;
+}
+
+.modal .modal__sign-up {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $font;
+  color: $dark;
+  font-size: 14px;
+  line-height: 21px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal p {
+  display: inline-block;
+  vertical-align: middle;
+  color: $grey;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.modal--show {
+  display: block;
+}
+
+@media (max-width: $tablet-width) {
+  .modal {
+    margin-left: -221px;
+    width: 442px;
+    padding: 51px;
+    padding-top: 189px;
+    background-image: url("../img/login-bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% auto;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .modal {
+      background-image: url("../img/login-bg-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
+  }
+
+  .modal__button-close {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    width: 22px;
+    height: 22px;
+
+    &::before,
+    &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 9px;
+      width: 2px;
+      height: 22px;
+      background-color: $dark;
+    }
+  }
+
+  .modal input {
+    padding-bottom: 9px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .modal {
+    margin-top: -235px;
+    margin-left: -135px;
+    width: 270px;
+    min-height: 470px;
+    padding: 15px;
+    padding-top: 120px;
+    background-image: url("../img/login-bg-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% auto;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .modal {
+      background-image: url("../img/login-bg-mobile@2x.jpg");
+      background-size: 100% auto;
+    }
+  }
+
+  .modal__button-close {
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 9px;
+      width: 2px;
+      height: 16px;
+      background-color: $dark;
+    }
+  }
+
+  .modal h1 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .modal input {
+    padding-bottom: 9px;
+    margin-bottom: 20px;
+  }
+
+  .modal__password-wrapper a {
+    bottom: -2px;
+    right: -1px;
+  }
+}

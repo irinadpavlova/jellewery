@@ -1,0 +1,22 @@
+.container {
+  width: 87.12%;
+  max-width: 1370px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+  .container {
+    width: 90.89%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .container {
+    width: 96.88%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}

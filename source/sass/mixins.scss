@@ -3,7 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   font-family: "Poppins", "Arial", sans-serif;
-  color: #1D1613;
+  color: #1d1613;
   text-align: center;
 }
 
@@ -14,25 +14,14 @@
   list-style: none;
 }
 
-@mixin title-desktop {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 42px;
-  color: #011c40;
-}
-
-@mixin title-tablet {
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 36px;
-  color: #011c40;
-}
-
-@mixin title-mobile {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
-  color: #011c40;
+@mixin title {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #1d1613;
 }
 
 @mixin button {
@@ -42,10 +31,22 @@
   padding-top: 9px;
   border: none;
   font-family: "Poppins", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 21px;
   text-align: center;
-  color: #011c40;
-  background-color: #f9fbfd;
+  color: $white;
+  background-color: $brown;
+}
+
+@mixin underline {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $brown;
+  }
 }

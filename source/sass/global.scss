@@ -9,6 +9,10 @@ body {
   background-color: $white;
 }
 
+.body-lock {
+  overflow: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
