@@ -410,6 +410,38 @@
     <p>Don’t have an account?</p>
     <a class="modal__sign-up" href="#">Sign up</a>
   </div>
+  <div class="success modal">
+    <h2 class="success__title">The item was added to your cart</h2>
+    <button class="success__button-close" type="button"><span class="visually-hidden">Close</span></button>
+    <div class="success__wrapper">
+      <div class="success__container">
+        <div class="success__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/necklace-detail-small-mobile@1x.webp, img/necklace-detail-small-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/necklace-detail-small-tablet@1x.webp, img/necklace-detail-small-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/necklace-detail-small@1x.webp, img/necklace-detail-small@2x.webp 2x">
+            <!-- 1х: 84px; 2x: 168px -->
+            <img src="img/necklace-detail-small@1x.jpg" srcset="img/necklace-detail-small@2x.jpg 2x" width="84" height="79" alt="gold necklace with blue stones and gold coins">
+          </picture>
+        </div>
+        <div class="success__heading-wrapper">
+          <h3>Gold Necklace</h3>
+          <p>$ 115</p>
+        </div>
+        <div class="success__number">
+          <button class="success__button-number success__button-number--add" type="button"><span class="visually-hidden">Add the item</span></button>
+          <span class="success__number-show">1</span>
+          <button class="success__button-number success__button-number--remove" type="button"><span class="visually-hidden">remove the item</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="success__container">
+      <p class="success__info success__info--number">You have <span>1</span> item in the cart</p>
+      <p class="success__info success__info--price">Cart subtotal: <span>$ 115</span></p>
+      <a class="success__button-catalog button" href="catalog.html">Continue shopping</a>
+      <a class="success__button-cart button" href="#">Checkout</a>
+    </div>
+  </div>
   <div class="overlay"></div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

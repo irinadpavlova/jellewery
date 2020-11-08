@@ -172,8 +172,88 @@
     document.removeEventListener('keydown', onPopupEscPress);
   };
 
-  filterButton.addEventListener('click', function (evt) {
+  if (filterButton) {
+    filterButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      openPopup(filterPopup, filterClose);
+    });
+  }
+})();
+
+(function () {
+  var button = document.querySelector(".success__button-close");
+  var overlay = document.querySelector(".overlay");
+  var form = document.querySelector(".card__form");
+  var popupSuccess = document.querySelector(".success");
+
+  var URL = 'https://echo.htmlacademy.ru';
+  var StatusCode = {
+    OK: 200
+  };
+
+  var save = function (data, onLoad, onError) {
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+
+    xhr.addEventListener('load', function () {
+      if (xhr.status === StatusCode.OK) {
+        onLoad(xhr.response);
+      } else {
+        onError('Статус ответа: ' + xhr.status + ' ' + xhr.statusText);
+      }
+    });
+    xhr.addEventListener('error', function () {
+      onError('Произошла ошибка соединения');
+    });
+
+    xhr.open('POST', URL);
+    xhr.send(data);
+  }
+
+  var onSuccessPopupEscPress = function (evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closeSuccessPopup();
+    }
+  };
+
+  var onOutsideOfSuccessPopupClick = function (evt) {
+    closeSuccessPopup();
+  };
+
+  var onButtonSuccessClick = function (evt) {
     evt.preventDefault();
-    openPopup(filterPopup, filterClose);
+    closeSuccessPopup();
+  }
+
+  var openSuccessPopup = function () {
+    popupSuccess.classList.add("modal--show");
+    overlay.classList.add("overlay--show");
+
+    overlay.addEventListener('click', onOutsideOfSuccessPopupClick);
+
+    button.addEventListener('click', onButtonSuccessClick);
+
+    document.addEventListener('keydown', onSuccessPopupEscPress);
+  };
+
+  var closeSuccessPopup = function () {
+    popupSuccess.classList.remove("modal--show");
+    overlay.classList.remove("overlay--show");
+
+    overlay.removeEventListener('click', onOutsideOfSuccessPopupClick);
+
+    button.removeEventListener('click', onButtonSuccessClick);
+
+    document.removeEventListener('keydown', onSuccessPopupEscPress);
+  };
+
+  form.addEventListener("submit", function (evt) {
+    save(new FormData(form), function () {
+      openSuccessPopup();
+    }, function () {
+      console.log("неправильный ввод");
+    });
+    evt.preventDefault();
   });
 })();
