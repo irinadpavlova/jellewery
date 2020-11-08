@@ -2,11 +2,24 @@
   margin-bottom: 115px;
 }
 
+.new--card {
+  margin-bottom: 126px;
+}
+
 .new h2 {
   margin: 0;
 
   @include title;
   letter-spacing: normal;
+}
+
+.new--card .new__link {
+  margin-top: 20px;
+  margin-bottom: 65px;
+
+  &::before {
+    bottom: -5px;
+  }
 }
 
 .new a {
@@ -32,6 +45,15 @@
     width: 100%;
     height: 1px;
     background-color: #a87b62;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -135,6 +157,10 @@
     margin-bottom: 64px;
   }
 
+  .new--card {
+    margin-bottom: 76px;
+  }
+
   .new a {
     margin-top: 21px;
     margin-bottom: 54px;
@@ -181,11 +207,19 @@
   .new p {
     margin-bottom: 42px;
   }
+
+  .new--card .new__link {
+    margin-bottom: 56px;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .new {
     margin-bottom: 54px;
+  }
+
+  .new--card {
+    margin-bottom: 64px;
   }
 
   .new a {
@@ -257,5 +291,9 @@
 
   .new p {
     margin-bottom: 32px;
+  }
+
+  .new--card .new__link {
+    margin-bottom: 45px;
   }
 }

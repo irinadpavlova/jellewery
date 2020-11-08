@@ -21,6 +21,7 @@
   font-size: 18px;
   line-height: 23px;
   letter-spacing: normal;
+  cursor: pointer;
 }
 
 .questions ul {
@@ -53,7 +54,7 @@
   display: none;
 }
 
-.questions__item--active p {
+.questions__item-title--active + p {
   display: block;
   width: 61%;
   margin: 0;
@@ -62,7 +63,7 @@
   line-height: 21px;
 }
 
-.questions__item--active svg {
+.questions__item-title--active svg {
   transform: rotate(180deg);
 }
 

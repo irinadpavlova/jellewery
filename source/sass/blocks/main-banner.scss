@@ -93,6 +93,24 @@
       background-size: cover;
     }
   }
+
+  .main-banner--catalog {
+    min-height: 261px;
+    background: url("../img/catalog-bg-tablet@1x.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: $bg;
+    padding-top: 91px;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-banner--catalog {
+      background-image: url("../img/catalog-bg-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -112,6 +130,24 @@
     }
   }
 
+  .main-banner--catalog {
+    min-height: 261px;
+    background: url("../img/catalog-bg-mobile@1x.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: $bg;
+    padding-top: 78px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-banner--catalog {
+      background-image: url("../img/catalog-bg-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+
   .main-banner p {
     font-size: 34px;
     line-height: 44px;
@@ -124,5 +160,16 @@
 
   .main-banner .main-banner__text {
     margin-top: -7px;
+  }
+
+  .main-banner--catalog h3 {
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 4px;
+  }
+
+  .main-banner--catalog p {
+    font-size: 22px;
+    line-height: 26px;
   }
 }

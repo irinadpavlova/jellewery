@@ -24,6 +24,15 @@
   color: $dark;
 
   @include underline;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .follow-us__wrapper {
