@@ -248,12 +248,14 @@
     document.removeEventListener('keydown', onSuccessPopupEscPress);
   };
 
-  form.addEventListener("submit", function (evt) {
-    save(new FormData(form), function () {
-      openSuccessPopup();
-    }, function () {
-      console.log("неправильный ввод");
+  if (form) {
+    form.addEventListener("submit", function (evt) {
+      save(new FormData(form), function () {
+        openSuccessPopup();
+      }, function () {
+        console.log("неправильный ввод");
+      });
+      evt.preventDefault();
     });
-    evt.preventDefault();
-  });
+  }
 })();
