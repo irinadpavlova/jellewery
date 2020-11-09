@@ -57,7 +57,17 @@
   }
 }
 
+.new .new__swiper-slide {
+  width: 23.08%;
+  margin-right: 2.56%;
+
+  &:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
 .new__img-wrapper {
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -178,6 +188,19 @@
     background-size: contain;
   }
 
+  .new .new__swiper-slide {
+    width: 47.79%;
+    margin-right: 4.42%;
+
+    &:nth-of-type(4n) {
+      margin-right: 4.42%;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
   .new__img-wrapper {
     width: 100%;
   }
@@ -295,5 +318,14 @@
 
   .new--card .new__link {
     margin-bottom: 45px;
+  }
+
+  .new .new__swiper-slide {
+    width: 44.83%;
+    margin-right: 10.34%;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
   }
 }

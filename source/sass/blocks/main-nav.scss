@@ -218,7 +218,7 @@
 
     display: block;
     width: 25px;
-    height: 16px;
+    height: 20px;
 
     background-color: transparent;
 
@@ -289,6 +289,10 @@
     background-color: $brown;
   }
 
+  .main-nav--nojs {
+    margin-bottom: 100px;
+  }
+
   .main-nav--nojs .main-nav__main-list,
   .main-nav--opened .main-nav__main-list {
     display: flex;
@@ -306,6 +310,15 @@
     color: $white;
     background-color: $brown;
     text-align: left;
+  }
+
+  .main-nav--nojs .main-nav__main-list--catalog,
+  .main-nav--opened .main-nav__main-list--catalog {
+    margin-top: 105px;
+    width: 90.89%;
+    padding: 0 10px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .main-nav--nojs form,
@@ -337,8 +350,8 @@
     background: rgba(255, 255, 255, 0.15);
   }
 
-  .main-nav--nojs a[href],
-  .main-nav--opened a[href] {
+  .main-nav--nojs a:not(.logo),
+  .main-nav--opened a:not(.logo){
     display: block;
     width: 100%;
     margin-bottom: 26px;
@@ -364,6 +377,16 @@
     margin-bottom: 21px;
   }
 
+  .main-nav--nojs .main-nav__link--catalog[href],
+  .main-nav--opened .main-nav__link--catalog[href] {
+    margin-bottom: 2px;
+  }
+
+  .main-nav--nojs .main-nav__link--catalog-last[href],
+  .main-nav--opened .main-nav__link--catalog-last[href] {
+    margin-bottom: 22px;
+  }
+
   .main-nav--nojs .main-nav__link--info[href],
   .main-nav--opened .main-nav__link--info[href] {
     font-weight: 500;
@@ -380,9 +403,21 @@
     margin-top: 40px;
   }
 
+  .main-nav--nojs .main-nav__link--info-catalog[href],
+  .main-nav--opened .main-nav__link--info-catalog[href] {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+
   .main-nav--nojs .main-nav__login[href],
   .main-nav--opened .main-nav__login[href] {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__link--login-catalog[href],
+  .main-nav--opened .main-nav__link--login-catalog[href] {
+    color: $white;
+    margin-top: 23px;
   }
 
   .main-nav--nojs .main-nav__logo,
@@ -438,7 +473,8 @@
     bottom: 0;
   }
 
-  .main-nav--opened .main-nav__cart-svg {
+  .main-nav--opened .main-nav__cart-svg,
+  .main-nav--nojs .main-nav__cart-svg {
     display: block;
     stroke: $white;
   }
