@@ -115,10 +115,9 @@
 
   Array.from(panelItem).forEach(function (item) {
     item.addEventListener('click', function () {
-      if (active.length > 0 && active[0] !== item) { // если есть активный элемент, и это не тот по которому кликнули
+      if (active.length > 0 && active[0] !== item) {
         active[0].classList.remove('questions__item-title--active');
-      } // убрать класс panel-active
-      // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
+      }
       item.classList.toggle('questions__item-title--active');
     });
   });
@@ -130,10 +129,9 @@
 
   Array.from(panelItem).forEach(function (item) {
     item.addEventListener('click', function () {
-      if (active.length > 0 && active[0] !== item) { // если есть активный элемент, и это не тот по которому кликнули
+      if (active.length > 0 && active[0] !== item) {
         active[0].classList.remove('filter__item-legend--active');
-      } // убрать класс panel-active
-      // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
+      }
       item.classList.toggle('filter__item-legend--active');
     });
   });
@@ -181,10 +179,10 @@
 })();
 
 (function () {
-  var button = document.querySelector(".success__button-close");
-  var overlay = document.querySelector(".overlay");
-  var form = document.querySelector(".card__form");
-  var popupSuccess = document.querySelector(".success");
+  var button = document.querySelector('.success__button-close');
+  var overlay = document.querySelector('.overlay');
+  var form = document.querySelector('.card__form');
+  var popupSuccess = document.querySelector('.success');
 
   var URL = 'https://echo.htmlacademy.ru';
   var StatusCode = {
@@ -208,7 +206,7 @@
 
     xhr.open('POST', URL);
     xhr.send(data);
-  }
+  };
 
   var onSuccessPopupEscPress = function (evt) {
     if (evt.key === 'Escape') {
@@ -218,17 +216,18 @@
   };
 
   var onOutsideOfSuccessPopupClick = function (evt) {
+    evt.preventDefault();
     closeSuccessPopup();
   };
 
   var onButtonSuccessClick = function (evt) {
     evt.preventDefault();
     closeSuccessPopup();
-  }
+  };
 
   var openSuccessPopup = function () {
-    popupSuccess.classList.add("modal--show");
-    overlay.classList.add("overlay--show");
+    popupSuccess.classList.add('modal--show');
+    overlay.classList.add('overlay--show');
 
     overlay.addEventListener('click', onOutsideOfSuccessPopupClick);
 
@@ -238,8 +237,8 @@
   };
 
   var closeSuccessPopup = function () {
-    popupSuccess.classList.remove("modal--show");
-    overlay.classList.remove("overlay--show");
+    popupSuccess.classList.remove('modal--show');
+    overlay.classList.remove('overlay--show');
 
     overlay.removeEventListener('click', onOutsideOfSuccessPopupClick);
 
@@ -249,11 +248,11 @@
   };
 
   if (form) {
-    form.addEventListener("submit", function (evt) {
+    form.addEventListener('submit', function (evt) {
       save(new FormData(form), function () {
         openSuccessPopup();
       }, function () {
-        console.log("неправильный ввод");
+        console.log('неправильный ввод');
       });
       evt.preventDefault();
     });
