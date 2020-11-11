@@ -154,11 +154,11 @@
 
   .card .card__img-wrapper {
     width: 30.41%;
-  }
 
-  .card .card__img-wrapper--full {
-    width: 100%;
-    order: 1;
+    &--full {
+      width: 100%;
+      order: 1;
+    }
   }
 
   .card__img-wrapper img {

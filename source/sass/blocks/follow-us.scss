@@ -55,19 +55,39 @@
   width: 34.85%;
 }
 
-.follow-us__img-wrapper--square {
-  width: 100%;
-  padding-bottom: 13%;
-}
-
-.follow-us__img-wrapper--leaves {
-  width: 60.61%;
-}
-
 .follow-us__img-wrapper img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.follow-us__img-wrapper {
+  &--square {
+    width: 100%;
+    padding-bottom: 13%;
+  }
+
+  &--leaves {
+    width: 60.61%;
+  }
+
+  &--bracelets {
+    width: 48.33%;
+    padding-bottom: 6%;
+  }
+
+  &--round {
+    width: 45.42%;
+  }
+
+  &--sea {
+    width: 45.42%;
+  }
+
+  &--rings {
+    width: 48.33%;
+    padding-top: 5.4%;
+  }
 }
 
 .follow-us__wrapper-right {
@@ -76,30 +96,12 @@
   width: 41.03%;
 }
 
-.follow-us__img-wrapper--bracelets {
-  width: 48.33%;
-  padding-bottom: 6%;
-}
-
 .follow-us__wrapper-right .follow-us__img-wrapper {
   margin-right: 6%;
 
   &:nth-of-type(2n) {
     margin-right: 0;
   }
-}
-
-.follow-us__img-wrapper--round {
-  width: 45.42%;
-}
-
-.follow-us__img-wrapper--sea {
-  width: 45.42%;
-}
-
-.follow-us__img-wrapper--rings {
-  width: 48.33%;
-  padding-top: 5.4%;
 }
 
 @media (max-width: $tablet-width) {
@@ -126,12 +128,31 @@
     width: 100%;
   }
 
-  .follow-us__img-wrapper--round {
-    display: none;
-  }
+  .follow-us__img-wrapper {
+    &--round,
+    &--rings {
+      display: none;
+    }
 
-  .follow-us__img-wrapper--rings {
-    display: none;
+    &--leaves {
+      width: 50%;
+    }
+
+    &--square {
+      padding-bottom: 11%;
+    }
+
+    &--sea {
+      width: 44.83%;
+      padding-top: 2%;
+      order: 1;
+    }
+
+    &--bracelets {
+      width: 50%;
+      padding-bottom: 6%;
+      order: 2;
+    }
   }
 
   .follow-us a {
@@ -144,26 +165,6 @@
     flex-direction: column;
     width: 44.83%;
     margin-bottom: 21%;
-  }
-
-  .follow-us__img-wrapper--leaves {
-    width: 50%;
-  }
-
-  .follow-us__img-wrapper--square {
-    padding-bottom: 11%;
-  }
-
-  .follow-us__img-wrapper--sea {
-    width: 44.83%;
-    padding-top: 2%;
-    order: 1;
-  }
-
-  .follow-us__img-wrapper--bracelets {
-    width: 50%;
-    padding-bottom: 6%;
-    order: 2;
   }
 
   .follow-us__wrapper-right .follow-us__img-wrapper--bracelets {

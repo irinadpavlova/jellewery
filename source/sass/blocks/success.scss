@@ -184,11 +184,11 @@
   text-align: left;
   line-height: 18px;
   font-weight: 400;
-}
 
-.success .success__info--price {
-  text-align: right;
-  font-weight: 500;
+  &--price {
+    text-align: right;
+    font-weight: 500;
+  }
 }
 
 .success .success__button-catalog {
@@ -335,16 +335,16 @@
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
-  }
 
-  .success .success__info--price {
-    text-align: left;
-    font-weight: 500;
-    margin-bottom: 32px;
-  }
+    &--price {
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
 
-  .success .success__info--number {
-    padding-top: 21px;
+    &--number {
+      padding-top: 21px;
+    }
   }
 
   .success .success__button-catalog {

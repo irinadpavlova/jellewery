@@ -117,19 +117,19 @@
     height: 1px;
     background-color: #f6f5f4;
   }
-}
 
-.main-nav__bottom--card {
-  margin-bottom: 68px;
+  &--card {
+    margin-bottom: 68px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #f6f5f4;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #f6f5f4;
+    }
   }
 }
 
@@ -180,12 +180,6 @@
 @media (max-width: $tablet-width) {
   .main-nav__top form {
     display: none;
-  }
-
-  .main-nav {
-    width: 100%;
-    position: relative;
-    justify-content: flex-start;
   }
 
   .main-nav__user {
@@ -280,17 +274,33 @@
     stroke: $dark;
   }
 
-  .main-nav--nojs,
-  .main-nav--opened {
-    position: relative;
+  .main-nav {
     width: 100%;
-    min-height: 778px;
-    color: $white;
-    background-color: $brown;
-  }
+    position: relative;
+    justify-content: flex-start;
 
-  .main-nav--nojs {
-    margin-bottom: 100px;
+    &--nojs {
+      position: relative;
+      width: 100%;
+      min-height: 778px;
+      color: $white;
+      background-color: $brown;
+      margin-bottom: 100px;
+    }
+
+    &--opened {
+      width: 100%;
+      min-height: 778px;
+      color: $white;
+      background-color: $brown;
+      position: absolute;
+      min-width: 320px;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   .main-nav--nojs .main-nav__main-list,
@@ -461,16 +471,6 @@
   .main-nav__cart svg {
     fill: none;
     display: none;
-  }
-
-  .main-nav--opened {
-    position: absolute;
-    min-width: 320px;
-    z-index: 3;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
   }
 
   .main-nav--opened .main-nav__cart-svg,

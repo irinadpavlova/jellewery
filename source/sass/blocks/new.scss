@@ -1,9 +1,9 @@
 .new {
   margin-bottom: 115px;
-}
 
-.new--card {
-  margin-bottom: 126px;
+  &--card {
+    margin-bottom: 126px;
+  }
 }
 
 .new h2 {
@@ -165,10 +165,10 @@
 @media (max-width: $tablet-width) {
   .new {
     margin-bottom: 64px;
-  }
 
-  .new--card {
-    margin-bottom: 76px;
+    &--card {
+      margin-bottom: 76px;
+    }
   }
 
   .new a {
@@ -239,10 +239,10 @@
 @media (max-width: $mobile-width) {
   .new {
     margin-bottom: 54px;
-  }
 
-  .new--card {
-    margin-bottom: 64px;
+    &--card {
+      margin-bottom: 64px;
+    }
   }
 
   .new a {
