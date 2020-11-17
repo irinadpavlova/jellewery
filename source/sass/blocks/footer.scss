@@ -1,5 +1,6 @@
 .footer {
   background-color: $black;
+  min-height: 338px;
 }
 
 .footer__container {
@@ -25,7 +26,7 @@
 .footer__stuff .footer__main-text {
   margin: 0;
   margin-bottom: 8px;
-  margin-left: -3px;
+  margin-left: 0;
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
@@ -104,6 +105,7 @@
   text-align: left;
   color: $white;
   background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -139,7 +141,7 @@
   display: block;
   line-height: 21px;
   color: $white;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   text-align: left;
 
   &:hover {
@@ -228,15 +230,28 @@
 }
 
 @media (max-width: $tablet-width) {
+  .footer {
+    min-height: 446px;
+  }
+
   .footer__stuff {
     width: 82.6%;
     max-width: 600px;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
 
   .footer__stuff .footer__main-text {
     font-size: 34px;
     line-height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .footer .footer__text {
+    margin-bottom: 33px;
+  }
+
+  .footer a {
+    margin-bottom: 21px;
   }
 
   .footer__container {
@@ -280,8 +295,16 @@
 }
 
 @media (max-width: $mobile-width) {
+  .footer {
+    min-height: 773px;
+  }
+
   .footer__stuff .footer__main-text {
     margin-bottom: 15px;
+  }
+
+  .footer .footer__text {
+    margin-bottom: 34px;
   }
 
   .footer__stuff {
@@ -300,7 +323,7 @@
   .footer__links--left {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 17px;
+    margin-bottom: 21px;
   }
 
   .footer__stuff form {
@@ -310,7 +333,7 @@
   .footer__links--right {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     padding-top: 0;
   }
 

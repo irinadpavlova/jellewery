@@ -220,6 +220,20 @@
   .filter {
     width: 100%;
     margin-right: 0;
+
+    &--modal {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: $white;
+    }
+  }
+
+  .filter--modal .filter__button {
+    display: none;
   }
 
   .filter__form {
@@ -227,7 +241,7 @@
 
     &--modal {
       display: block;
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       margin-top: -420px;
@@ -238,6 +252,32 @@
       background-color: $white;
       box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
     }
+
+    &--nojs {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+      width: 442px;
+      min-height: 841px;
+      background-color: $white;
+      box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+    }
+  }
+
+  .filter__form--nojs .filter__button-close,
+  .filter__form--nojs .filter__search-svg {
+    display: none;
+  }
+
+  .filter__form--nojs ul,
+  .filter__form--nojs .filter__range-wrapper {
+    display: block;
+  }
+
+  .filter__form--nojs .filter__fieldset-wrapper {
+    border: none;
   }
 
   .filter__button-close {
@@ -393,14 +433,21 @@
     margin-bottom: 40px;
   }
 
-  .filter__form--modal {
-    top: 50%;
-    left: 50%;
-    margin-top: -368px;
-    margin-left: -135px;
-    z-index: 10;
-    width: 270px;
-    min-height: 736px;
+  .filter__form {
+    &--modal {
+      top: 0;
+      left: 50%;
+      margin-top: 60px;
+      margin-left: -135px;
+      z-index: 10;
+      width: 270px;
+      min-height: 736px;
+    }
+
+    &--nojs {
+      width: 270px;
+      min-height: 736px;
+    }
   }
 
   .filter__button-close {

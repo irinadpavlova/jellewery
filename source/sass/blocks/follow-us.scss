@@ -20,7 +20,7 @@
   display: block;
   width: 75px;
   margin: 0 auto;
-  margin-bottom: 64px;
+  margin-bottom: 62px;
   color: $dark;
 
   @include underline;
@@ -108,11 +108,19 @@
   .follow-us {
     margin-bottom: 79px;
   }
+
+  .follow-us h2 {
+    margin-bottom: 15px;
+  }
+
+  .follow-us a {
+    margin-bottom: 63px;
+  }
 }
 
 @media (max-width: $mobile-width) {
   .follow-us {
-    margin-bottom: 53px;
+    margin-bottom: 54px;
   }
 
   .follow-us__wrapper {

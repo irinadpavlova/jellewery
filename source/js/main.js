@@ -21,6 +21,7 @@
 })();
 
 (function () {
+  var body = document.querySelector('body');
   var buttons = document.querySelectorAll('.login');
   var buttonClose = document.querySelector('.modal__button-close');
   var popup = document.querySelector('.modal--login');
@@ -55,6 +56,8 @@
     modalButtonClose.addEventListener('click', onButtonCloseClick);
 
     document.addEventListener('keydown', onPopupEscPress);
+
+    body.classList.add('body-lock');
   };
 
   var closePopup = function (modalPopup, modalOverlay, modalButtonClose) {
@@ -66,6 +69,8 @@
     modalButtonClose.removeEventListener('click', onButtonCloseClick);
 
     document.removeEventListener('keydown', onPopupEscPress);
+
+    body.classList.remove('body-lock');
   };
 
   for (var i = 0; i < buttons.length; i++) {
@@ -75,7 +80,6 @@
 
       if (storageMail) {
         email.value = storageMail;
-        password.value = '';
         password.focus();
       } else {
         email.focus();
@@ -86,9 +90,9 @@
 
 (function () {
   var swiper = new Swiper('.new__swiper-container', {
-    slidesPerView: 2,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
     spaceBetween: 30,
-    slidesPerGroup: 2,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -101,9 +105,9 @@
       prevEl: '.new__button-prev',
     },
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
+      1023: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
       }
     }
   });
@@ -112,8 +116,13 @@
 (function () {
   var panelItem = document.querySelectorAll('.questions__item-title');
   var active = document.getElementsByClassName('questions__item-title--active');
+  var panel = document.querySelector('.questions');
 
-  Array.from(panelItem).forEach(function (item) {
+  if (panel) {
+    panel.classList.remove('questions--nojs');
+  }
+
+  Array.prototype.slice.call(panelItem).forEach(function (item) {
     item.addEventListener('click', function () {
       if (active.length > 0 && active[0] !== item) {
         active[0].classList.remove('questions__item-title--active');
@@ -127,7 +136,7 @@
   var panelItem = document.querySelectorAll('.filter__item-legend');
   var active = document.getElementsByClassName('filter__item-legend--active');
 
-  Array.from(panelItem).forEach(function (item) {
+  Array.prototype.slice.call(panelItem).forEach(function (item) {
     item.addEventListener('click', function () {
       if (active.length > 0 && active[0] !== item) {
         active[0].classList.remove('filter__item-legend--active');
@@ -138,9 +147,15 @@
 })();
 
 (function () {
+  var body = document.querySelector('body');
   var filterButton = document.querySelector('.filter__button');
   var filterClose = document.querySelector('.filter__button-close');
   var filterPopup = document.querySelector('.filter__form');
+  var modalOverlay = document.querySelector('.filter');
+
+  if (filterPopup) {
+    filterPopup.classList.remove('filter__form--nojs');
+  }
 
   var onPopupEscPress = function (evt) {
     if (evt.key === 'Escape') {
@@ -160,6 +175,10 @@
     modalButtonClose.addEventListener('click', onButtonCloseClick);
 
     document.addEventListener('keydown', onPopupEscPress);
+
+    body.classList.add('body-lock');
+
+    modalOverlay.classList.add('filter--modal');
   };
 
   var closePopup = function (modalPopup, modalButtonClose) {
@@ -168,6 +187,10 @@
     modalButtonClose.removeEventListener('click', onButtonCloseClick);
 
     document.removeEventListener('keydown', onPopupEscPress);
+
+    body.classList.remove('body-lock');
+
+    modalOverlay.classList.remove('filter--modal');
   };
 
   if (filterButton) {
@@ -179,6 +202,7 @@
 })();
 
 (function () {
+  var body = document.querySelector('body');
   var button = document.querySelector('.success__button-close');
   var overlay = document.querySelector('.overlay');
   var form = document.querySelector('.card__form');
@@ -234,6 +258,8 @@
     button.addEventListener('click', onButtonSuccessClick);
 
     document.addEventListener('keydown', onSuccessPopupEscPress);
+
+    body.classList.add('body-lock');
   };
 
   var closeSuccessPopup = function () {
@@ -245,6 +271,8 @@
     button.removeEventListener('click', onButtonSuccessClick);
 
     document.removeEventListener('keydown', onSuccessPopupEscPress);
+
+    body.classList.remove('body-lock');
   };
 
   if (form) {
