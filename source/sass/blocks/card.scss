@@ -53,7 +53,7 @@
 
 .card__info h2 {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 
   @include title;
   text-align: left;
@@ -131,14 +131,14 @@
 
 @media (max-width: 1300px) {
   .card__info {
-    width: 40%;
-    margin-right: 0;
+    width: 33.3%;
   }
 }
 
 @media (max-width: 1112px) {
   .card__info {
     width: 43%;
+    margin-right: 0;
   }
 }
 
@@ -184,7 +184,7 @@
   }
 
   .card__info a {
-    margin-bottom: 24px;
+    margin-bottom: 21px;
   }
 
   .card__button {
@@ -239,7 +239,7 @@
   }
 
   .card__info p {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   .card__info .card__link--current {

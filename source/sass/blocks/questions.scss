@@ -1,8 +1,8 @@
 .questions {
-  width: 71.01%;
-  max-width: 1000px;
+  width: 79.01%;
+  max-width: 970px;
   margin: 0 auto;
-  margin-bottom: 111px;
+  margin-bottom: 113px;
 }
 
 .questions h2 {
@@ -30,9 +30,9 @@
 }
 
 .questions__item {
-  padding-top: 42px;
+  padding-top: 44px;
   padding-right: 50px;
-  padding-bottom: 31px;
+  padding-bottom: 28px;
   padding-left: 50px;
   border-bottom: 1px solid $brown;
 
@@ -48,7 +48,7 @@
 .questions__item svg {
   position: absolute;
   top: 6px;
-  right: -2px;
+  right: -1px;
   width: 16px;
   height: auto;
   fill: transparent;
@@ -61,7 +61,7 @@
 .questions__item-title--active + p,
 .questions--nojs p {
   display: block;
-  width: 61%;
+  width: 512px;
   margin: 0;
   margin-bottom: 8px;
   text-align: left;

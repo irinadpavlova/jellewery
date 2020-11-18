@@ -37,7 +37,12 @@
   height: 14px;
 }
 
+.main-nav input::-webkit-search-decoration {
+  appearance: none;
+}
+
 .main-nav input[type="search"] {
+  appearance: none;
   width: 208px;
   padding-top: 10px;
   padding-right: 12px;

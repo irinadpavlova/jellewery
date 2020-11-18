@@ -83,6 +83,14 @@
   fill: none;
 }
 
+.filter__form--nojs ul {
+  display: block;
+}
+
+.filter__form--nojs .filter__search-svg {
+  display: none;
+}
+
 .filter__item-legend--active + ul {
   display: block;
 }
@@ -229,6 +237,7 @@
       left: 0;
       bottom: 0;
       background-color: $white;
+      overflow-y: auto;
     }
   }
 
@@ -242,9 +251,9 @@
     &--modal {
       display: block;
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 50%;
-      margin-top: -420px;
+      margin-top: 60px;
       margin-left: -221px;
       z-index: 10;
       width: 442px;
